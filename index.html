@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campo de Fútbol con Jugadores</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Campo de Fútbol con Jugadores</h1>
+    
+    <div id="mainContainer">
+        
+        <div id="gameArea">
+            <canvas id="campoFutbol" width="1000" height="600"></canvas>
+        </div>
+
+        <div id="playersList">
+            <h2>Jugadores</h2>
+            <table id="playersTable">
+                <tbody>
+                    
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="controls">
+        <button id="resetButton">Borrar Todos los Jugadores</button>
+    </div>
+    <script>
+        // Crear partículas flotantes
+        document.addEventListener('DOMContentLoaded', () => {
+          for (let i = 0; i < 20; i++) {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            Object.assign(particle.style, {
+              width: `${Math.random() * 10 + 2}px`,
+              height: particle.style.width,
+              left: `${Math.random() * 100}vw`,
+              top: `${Math.random() * 100}vh`,
+              opacity: Math.random() * 0.5 + 0.1,
+              animationDuration: `${Math.random() * 20 + 10}s`
+            });
+            document.body.appendChild(particle);
+          }
+        });
+      </script>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
